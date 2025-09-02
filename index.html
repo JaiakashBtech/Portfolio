@@ -681,6 +681,140 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
+        .section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Grid Layout */
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* Instagram Card Styles */
+        .instagram-card {
+            background: #fff;
+            border: 2px solid #ff6b6b;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .instagram-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Header inside cards */
+        .instagram-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .instagram-icon {
+            font-size: 28px;
+            color: #ff6b6b;
+            margin-right: 15px;
+        }
+
+        .instagram-info h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #222;
+        }
+
+        .instagram-info p {
+            margin: 2px 0 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* Links */
+        .instagram-link,
+        .works-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #fff;
+            background-color: #ff6b6b;
+            padding: 10px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .instagram-link:hover,
+        .works-link:hover {
+            background-color: #e05555;
+        }
+
+        /* Works Section */
+        .works-card {
+            background-color: #fff;
+            border: 2px solid #ff6b6b;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .works-icon {
+            font-size: 40px;
+            color: #ff6b6b;
+            margin-bottom: 10px;
+        }
+
+        .works-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .works-description {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Fade In Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 768px) {
+            .instagram-header {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .instagram-icon {
+                font-size: 24px;
+                margin-right: 10px;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            .works-title {
+                font-size: 1.25rem;
+            }
+
+            .works-description {
+                font-size: 0.95rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -694,6 +828,9 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#marketing">Marketing</a></li>
+                <li><a href="#works">Works</a></li>
             </ul>
             <div class="mobile-menu" id="mobileMenu">
                 <span></span>
@@ -716,6 +853,9 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#marketing">Marketing</a></li>
+            <li><a href="#works">Works</a></li>
         </ul>
     </div>
 
@@ -850,7 +990,109 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Clients Section -->
+    <section id="clients" class="section fade-in">
+        <h2>My Clients</h2>
+        <div class="instagram-grid">
+            <div class="instagram-card">
+                <div class="instagram-header">
+                    <div class="instagram-icon">📷</div>
+                    <div class="instagram-info">
+                        <h3>The Chocolate Club</h3>
+                        <p>@thechocolate_club</p>
+                    </div>
+                </div>
+                <p>Premium chocolate brand digital marketing and content creation.</p>
+                <a href="https://www.instagram.com/thechocolate_club?igsh=MWhhZW5kZ3J1bG10Ng==" target="_blank" class="instagram-link">View Profile →</a>
+            </div>
+            <div class="instagram-card">
+                <div class="instagram-header">
+                    <div class="instagram-icon">☕</div>
+                    <div class="instagram-info">
+                        <h3>Tempt Cafe</h3>
+                        <p>@temptcgc</p>
+                    </div>
+                </div>
+                <p>Cafe and restaurant digital marketing campaigns and social media management.</p>
+                <a href="https://www.instagram.com/temptcgc?igsh=MXNuc3E0dmkwZXJnaw==" target="_blank" class="instagram-link">View Profile →</a>
+            </div>
+            <div class="instagram-card">
+                <div class="instagram-header">
+                    <div class="instagram-icon">🎬</div>
+                    <div class="instagram-info">
+                        <h3>TVK Gokulnath</h3>
+                        <p>@tvk_gokulnath</p>
+                    </div>
+                </div>
+                <p>Personal brand content creation and digital presence management.</p>
+                <a href="https://www.instagram.com/tvk_gokulnath?igsh=MXNncWlhZXFqMjV1NQ==" target="_blank" class="instagram-link">View Profile →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Marketing Pages Section -->
+    <section id="marketing" class="section fade-in" style="background: #f8f9fa;">
+        <h2>My Digital Marketing Pages</h2>
+        <div class="instagram-grid">
+            <div class="instagram-card">
+                <div class="instagram-header">
+                    <div class="instagram-icon">🏙️</div>
+                    <div class="instagram-info">
+                        <h3>Streets of Madurai</h3>
+                        <p>@streets_of_madurai_</p>
+                    </div>
+                </div>
+                <p>Showcasing the beautiful streets and culture of Madurai city.</p>
+                <a href="https://www.instagram.com/streets_of_madurai_?igsh=MTFyOGd3eGhzaDhlZg==" target="_blank" class="instagram-link">View Profile →</a>
+            </div>
+            <div class="instagram-card">
+                <div class="instagram-header">
+                    <div class="instagram-icon">🎨</div>
+                    <div class="instagram-info">
+                        <h3>Aesthetic Zone</h3>
+                        <p>@axthetic.zone</p>
+                    </div>
+                </div>
+                <p>Creative aesthetic content and visual inspiration hub.</p>
+                <a href="https://www.instagram.com/axthetic.zone?igsh=aWFmbTc0MWdzaWNo" target="_blank" class="instagram-link">View Profile →</a>
+            </div>
+            <div class="instagram-card">
+                <div class="instagram-header">
+                    <div class="instagram-icon">💪</div>
+                    <div class="instagram-info">
+                        <h3>Madurai Suthum Vaaliban</h3>
+                        <p>@madurai_suthum_vaaliban</p>
+                    </div>
+                </div>
+                <p>Local community and cultural content from Madurai.</p>
+                <a href="https://www.instagram.com/madurai_suthum_vaaliban?igsh=MWU2OGp3ajVrb254Mw==" target="_blank" class="instagram-link">View Profile →</a>
+            </div>
+            <div class="instagram-card">
+                <div class="instagram-header">
+                    <div class="instagram-icon">👨‍💼</div>
+                    <div class="instagram-info">
+                        <h3>Mr Akash</h3>
+                        <p>@mr_akaxh__</p>
+                    </div>
+                </div>
+                <p>Personal brand and professional content showcase.</p>
+                <a href="https://www.instagram.com/mr_akaxh__?igsh=ejZoMHNxMmI0NXc5" target="_blank" class="instagram-link">View Profile →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Works Section -->
+    <section id="works" class="section fade-in">
+        <h2>My Works</h2>
+        <div class="works-card">
+            <div class="works-icon">📁</div>
+            <div class="works-title">Portfolio & Projects</div>
+            <div class="works-description">
+                Explore my complete collection of video editing projects, UI/UX designs, digital marketing campaigns, and creative content. This drive contains samples of my work across various clients and personal projects.
+            </div>
+            <a href="https://drive.google.com/drive/folders/1R7SF5zMya4QbSARe_bskcfdxF0pJ48Ma" target="_blank" class="works-link">View My Work Collection →</a>
+        </div>
+    </section>
     <footer>
         <p>&copy; 2025 Jai Akash KG. All rights reserved.</p>
         <p>Ready to collaborate and create amazing projects together!</p>
